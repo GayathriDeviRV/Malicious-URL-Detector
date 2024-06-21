@@ -1,35 +1,3 @@
-"""
-from flask import Flask, request, render_template, jsonify
-import joblib
-import pandas as pd
-from extract_features import extract_features
-
-app = Flask(__name__)
-
-# Load the model and scaler
-model = joblib.load('url_classifier_model.pkl')
-scaler = joblib.load('scaler.pkl')
-
-
-@app.route('/')
-def home():
-    return render_template('index.html')
-
-
-@app.route('/predict', methods=['POST'])
-def predict():
-    url = request.form['url']
-    features_df = extract_features(url)
-    features_scaled = scaler.transform(features_df)
-    prediction = model.predict(features_scaled)
-    result = 'Malicious' if prediction[0] == 1 else 'Benign'
-    return jsonify(result=result)
-
-
-if __name__ == '__main__':
-    app.run(debug=True)
-"""
-
 from flask import Flask, request, render_template, jsonify
 from flask_socketio import SocketIO, disconnect
 import joblib
