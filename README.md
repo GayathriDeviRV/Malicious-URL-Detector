@@ -12,6 +12,7 @@ Description: This dataset includes features covering aspects such as URL structu
 Features Used: A set of 22 important features extracted from URLs, including length, entropy, domain details, path and query components.
 
 Model: Random Forest Classifier trained using hyperparameter tuning via GridSearchCV for optimal performance.
+
 Performance: Achieved an accuracy of 92.33% on the test dataset.
 
 ## Usage
