@@ -16,7 +16,7 @@ Performance: Achieved an accuracy of 92.33% on the test dataset.
 
 ## Usage
 ### Training and Evaluation:
-- Run url_classifier.py to train the model using the provided dataset.
+- Run url_classifier.ipynb to train the model using the provided dataset.
 - Evaluate model performance using metrics like accuracy, precision, recall, and F1-score.
 
 ### Deployment as Flask App:
@@ -24,14 +24,12 @@ Performance: Achieved an accuracy of 92.33% on the test dataset.
 - Users can input a URL and get real-time classification results on whether it is "Malicious" or "Benign".
 
 ## Files Included
-- url_classifier.py: Script for training the Random Forest model.
+- url_classifier.ipynb: Script for training the Random Forest model.
 - app.py: Flask web application for URL classification.
 - extract_features.py: Module for extracting URL features.
-- url_classifier_model.pkl: Saved trained model.
-- scaler.pkl: Saved scaler for feature scaling.
 
 ## How to Run
-- Train the model by running url_classifier.py.
+- Train the model by running url_classifier.ipynb.
 - Start the Flask app with python app.py.
 - Access the app via http://localhost:5000 in your web browser.
 
